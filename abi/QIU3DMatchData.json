@@ -1,0 +1,423 @@
+[
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "matches_",
+    "outputs": [
+      {
+        "name": "ended",
+        "type": "bool"
+      },
+      {
+        "name": "matchId",
+        "type": "uint256"
+      },
+      {
+        "name": "kickoffTime",
+        "type": "uint256"
+      },
+      {
+        "name": "halfHomeGoals",
+        "type": "uint256"
+      },
+      {
+        "name": "halfAwayGoals",
+        "type": "uint256"
+      },
+      {
+        "name": "homeGoals",
+        "type": "uint256"
+      },
+      {
+        "name": "awayGoals",
+        "type": "uint256"
+      },
+      {
+        "name": "homeTeam",
+        "type": "string"
+      },
+      {
+        "name": "awayTeam",
+        "type": "string"
+      },
+      {
+        "name": "homeTeamCN",
+        "type": "string"
+      },
+      {
+        "name": "awayTeamCN",
+        "type": "string"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "matchIds_",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "openMatchId_",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "matchId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "kickoffTime",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "homeTeam",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "awayTeam",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "homeTeamCN",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "name": "awayTeamCN",
+        "type": "string"
+      }
+    ],
+    "name": "onNewMatch",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "previousOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipRenounced",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_homeTeam",
+        "type": "string"
+      },
+      {
+        "name": "_awayTeam",
+        "type": "string"
+      },
+      {
+        "name": "_homeTeamCN",
+        "type": "string"
+      },
+      {
+        "name": "_awayTeamCN",
+        "type": "string"
+      },
+      {
+        "name": "_kickoffTime",
+        "type": "uint256"
+      }
+    ],
+    "name": "newMatch",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_matchId",
+        "type": "uint256"
+      },
+      {
+        "name": "_halfHomeGoals",
+        "type": "uint256"
+      },
+      {
+        "name": "_halfAwayGoals",
+        "type": "uint256"
+      },
+      {
+        "name": "_homeGoals",
+        "type": "uint256"
+      },
+      {
+        "name": "_awayGoals",
+        "type": "uint256"
+      }
+    ],
+    "name": "endMatch",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_matchId",
+        "type": "uint256"
+      },
+      {
+        "name": "_homeTeam",
+        "type": "string"
+      },
+      {
+        "name": "_awayTeam",
+        "type": "string"
+      },
+      {
+        "name": "_homeTeamCN",
+        "type": "string"
+      },
+      {
+        "name": "_awayTeamCN",
+        "type": "string"
+      },
+      {
+        "name": "_kickoffTime",
+        "type": "uint256"
+      }
+    ],
+    "name": "editMatch",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_matchId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getMatchInfo",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getOpenMatch",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "string"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getOpenMatchBaseInfo",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_matchId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getMatchStatus",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
