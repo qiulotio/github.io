@@ -1,6 +1,6 @@
-const WEB3_PROVIDER_URL = "https://rinkeby.infura.io/azQq0BuFT1gejVIk558B";
-const Q3D_MATCHDATA_CONTRACT_ADDRESS = "0x8d7d4bd876e4ede23341aed8408771b6dc266f97";
-const Q3D_CONTRACT_ADDRESS = "0xe4ee0160dd34e8ba495e406918c4ce9a69cb55a2";
+const WEB3_PROVIDER_URL = "https://mainnet.infura.io/azQq0BuFT1gejVIk558B";
+const Q3D_MATCHDATA_CONTRACT_ADDRESS = "0x785839B325518b2ef6Af7384aA5DF07520bbEBc7";
+const Q3D_CONTRACT_ADDRESS = "0x6f05bf7c8d50079ac864f48480a4e579189de0c6";
 const GITHUB_IMAGE_URL = "https://raw.githubusercontent.com/qiulot/qiu3d/master/logos/";
 
 function QIU3D(){
